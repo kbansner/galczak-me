@@ -9,6 +9,9 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    permissions: # Add this section if it's missing
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
