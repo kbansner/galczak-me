@@ -3,6 +3,7 @@ import viteImagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
   root: "src", // Tells Vite your code is in /src
+  publicDir: "../public", // Points to the public folder one level up
   build: {
     outDir: "../dist", // Places compressed files in /dist
     emptyOutDir: true,
